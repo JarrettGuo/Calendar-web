@@ -55,5 +55,4 @@
   - `store/`: Redux store 及相关文件
   - `services/`: 与后端交互的服务层
   - `styles/`: Tailwind CSS 和其他样式文件
-
 ```
