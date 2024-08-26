@@ -27,7 +27,7 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/calendar-demo-frontend.git
+   git clone [https://github.com/your-username/calendar-demo-frontend.git](https://github.com/JarrettGuo/Calendar-web.git)
    cd calendar-demo-frontend
    ```
 
@@ -42,7 +42,7 @@ Follow these steps to run the project locally:
    ```
 
 4. **Open the application**:
-   Open your browser and navigate to `http://localhost:3000`.
+   Open your browser and navigate to `http://localhost:5173`.
 
 ## Folder Structure
 
