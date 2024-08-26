@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+```markdown
+# Calendar Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 项目概述
 
-Currently, two official plugins are available:
+这是一个使用 React 开发的日历管理应用程序的前端部分。项目使用了 Redux 进行状态管理，Tailwind CSS 和 Shadcn 进行样式处理，并且通过 React Router 进行路由管理。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 技术栈
 
-## Expanding the ESLint configuration
+- **React**: 用于构建用户界面
+- **Redux**: 用于状态管理
+- **Tailwind CSS**: 用于快速构建响应式和现代化的用户界面
+- **Shadcn**: 用于 UI 组件库的集成
+- **ahooks**: 用于简化和增强 React Hooks 的使用
+- **React Router DOM**: 用于路由管理
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 环境设置
 
-- Configure the top-level `parserOptions` property like this:
+1. 确保已安装 Node.js 和 npm（或 yarn）。
+2. 克隆此仓库到本地：
+   ```bash
+   git clone https://github.com/yourusername/calendar-frontend.git
+   ```
+3. 进入项目目录：
+   ```bash
+   cd calendar-frontend
+   ```
+4. 安装依赖包：
+   ```bash
+   npm install
+   ```
+5. 启动开发服务器：
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+6. 打开浏览器并访问 `http://localhost:3000` 查看应用。
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 使用的库
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **@fullcalendar/react**: 用于集成 FullCalendar 组件
+- **@fullcalendar/daygrid**: 用于日历的月视图
+- **@fullcalendar/timegrid**: 用于日历的周、日视图
+- **@fullcalendar/interaction**: 用于拖拽和选择事件
+- **@fullcalendar/list**: 用于事件的列表视图
+- **axios**: 用于发起 HTTP 请求
+- **react-redux**: 与 Redux 集成
+- **redux-thunk**: Redux 的中间件，用于处理异步操作
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 代码结构
+
+- `src/`: 项目源码
+  - `components/`: 项目组件
+  - `pages/`: 页面组件
+  - `store/`: Redux store 及相关文件
+  - `services/`: 与后端交互的服务层
+  - `styles/`: Tailwind CSS 和其他样式文件
+
 ```
