@@ -27,6 +27,9 @@ const CustomCalendar: FC = () => {
     },
     {
       manual: true,
+      onSuccess: data => {
+        dispatch(addAppointment(data as AppointmentInfo))
+      },
     }
   )
 
@@ -36,6 +39,9 @@ const CustomCalendar: FC = () => {
     },
     {
       manual: true,
+      onSuccess: data => {
+        dispatch(removeAppointment(data.id as string))
+      },
     }
   )
 

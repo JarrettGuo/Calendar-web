@@ -20,7 +20,7 @@ export async function addAppointmentService(data: AppointmentInfo): Promise<ResD
 
 // 删除预约
 export async function deleteAppointmentService(id: string): Promise<ResDataType> {
-  const url = `${BASE_URL}/api/appointments/${id}`
-  const res = (await axios.delete(url)) as ResDataType
+  const url = `${BASE_URL}/api/appointments`
+  const res = await axios.delete(url, { data: { id } })
   return res
 }
