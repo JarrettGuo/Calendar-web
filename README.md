@@ -1,58 +1,64 @@
 ```markdown
-# Calendar Frontend
+# Calendar Demo - Frontend
 
-## 项目概述
+## Project Overview
 
-这是一个使用 React 开发的日历管理应用程序的前端部分。项目使用了 Redux 进行状态管理，Tailwind CSS 和 Shadcn 进行样式处理，并且通过 React Router 进行路由管理。
+This project is a calendar-based scheduling application built using React. It utilizes Redux for state management, Tailwind CSS for styling, and several other libraries to enhance functionality.
 
-## 技术栈
+## Tech Stack
 
-- **React**: 用于构建用户界面
-- **Redux**: 用于状态管理
-- **Tailwind CSS**: 用于快速构建响应式和现代化的用户界面
-- **Shadcn**: 用于 UI 组件库的集成
-- **ahooks**: 用于简化和增强 React Hooks 的使用
-- **React Router DOM**: 用于路由管理
+- **React**: A JavaScript library for building user interfaces.
+- **Redux**: State management for predictable state container.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **shadcn/ui**: Custom components and UI utilities.
+- **ahooks**: A collection of React hooks for common functionalities.
+- **React Router DOM**: Declarative routing for React applications.
+- **FullCalendar**: JavaScript calendar library for managing events.
 
-## 环境设置
+## Prerequisites
 
-1. 确保已安装 Node.js 和 npm（或 yarn）。
-2. 克隆此仓库到本地：
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v14.x or above)
+- **npm** (v6.x or above)
+
+## Getting Started
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/calendar-frontend.git
+   git clone https://github.com/your-username/calendar-demo-frontend.git
+   cd calendar-demo-frontend
    ```
-3. 进入项目目录：
-   ```bash
-   cd calendar-frontend
-   ```
-4. 安装依赖包：
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
-5. 启动开发服务器：
+
+3. **Start the development server**:
    ```bash
    npm run dev
    ```
 
-6. 打开浏览器并访问 `http://localhost:3000` 查看应用。
+4. **Open the application**:
+   Open your browser and navigate to `http://localhost:3000`.
 
-## 使用的库
+## Folder Structure
 
-- **@fullcalendar/react**: 用于集成 FullCalendar 组件
-- **@fullcalendar/daygrid**: 用于日历的月视图
-- **@fullcalendar/timegrid**: 用于日历的周、日视图
-- **@fullcalendar/interaction**: 用于拖拽和选择事件
-- **@fullcalendar/list**: 用于事件的列表视图
-- **axios**: 用于发起 HTTP 请求
-- **react-redux**: 与 Redux 集成
-- **redux-thunk**: Redux 的中间件，用于处理异步操作
+```plaintext
+src/
+|-- components/      # Reusable components
+|-- pages/           # Page components
+|-- store/           # Redux store and slices
+|-- utils/           # Utility functions
+|-- App.tsx          # Main application component
+|-- index.tsx        # Entry point of the application
+```
 
-## 代码结构
+## Additional Notes
 
-- `src/`: 项目源码
-  - `components/`: 项目组件
-  - `pages/`: 页面组件
-  - `store/`: Redux store 及相关文件
-  - `services/`: 与后端交互的服务层
-  - `styles/`: Tailwind CSS 和其他样式文件
+- **Environment Variables**: Make sure to configure any required environment variables in a `.env` file.
+- **Styling**: Tailwind CSS is used for styling, with some custom components styled using shadcn.
 ```
