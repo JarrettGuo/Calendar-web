@@ -24,11 +24,11 @@ export default function useLoadAppointment() {
   useEffect(() => {
     if (!appointmentList) return
     dispatch(setAppointment(appointmentList as AppointmentInfo[]))
-  }, [appointmentList])
+  }, [appointmentList, dispatch])
 
   useEffect(() => {
     loadAppointmentList()
-  }, [loadAppointmentList])
+  }, [loadAppointmentList, dispatch])
 
   return {
     appointmentList,
