@@ -74,7 +74,6 @@ const CustomCalendar: FC = () => {
       patientName: '',
       type: '',
     }
-    dispatch(addAppointment(appointment))
     addAppointmentServiceRun(appointment) // 调用后端接口添加预约
     setSelectInfo(null) // 关闭表单
   }
@@ -98,11 +97,14 @@ const CustomCalendar: FC = () => {
           onSubmit={handleEventFormSubmit}
           onCancel={handleEventFormCancel}
           initialData={{
+            title: '',
+            type: '',
             start: selectInfo.startStr,
             end: selectInfo.endStr,
           }}
         />
       )}
+
       <div className="demo-app-main flex flex-grow">
         <div className="w-2/3">
           <FullCalendar
@@ -149,7 +151,7 @@ const CustomCalendar: FC = () => {
   )
 }
 
-function renderEventContent(eventContent: EventContentArg) {
+function renderEventContent(eventContent: { timeText: string; event: EventApi }) {
   return (
     <>
       <b>{eventContent.timeText}</b>
