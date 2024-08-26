@@ -27,7 +27,7 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/your-username/calendar-demo-frontend.git](https://github.com/JarrettGuo/Calendar-web.git)
+   git clone https://github.com/your-username/calendar-demo-frontend.git
    cd calendar-demo-frontend
    ```
 
@@ -60,4 +60,3 @@ src/
 
 - **Environment Variables**: Make sure to configure any required environment variables in a `.env` file.
 - **Styling**: Tailwind CSS is used for styling, with some custom components styled using shadcn.
-```
