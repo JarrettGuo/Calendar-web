@@ -1,4 +1,3 @@
-```markdown
 # Calendar Demo - Frontend
 
 ## Project Overview
